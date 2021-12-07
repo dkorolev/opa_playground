@@ -17,7 +17,7 @@ curl -s -X PUT $OPA_SERVER/v1/policies/myapi --data-binary @step1-policy.rego | 
 
 echo
 echo "Running the test queries."
-curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "alice", "access": "write" } }' | jq
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "alice", "access": "write" } }' | jq .
 curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "bob", "access": "write" } }' | jq .
 curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{ "input": { "user": "bob", "access": "read" } }' | jq .
 curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/whocan --data-binary '{ "input": { "access": "read" } }' | jq .
