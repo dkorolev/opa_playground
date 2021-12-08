@@ -13,9 +13,9 @@ type Response struct {
 }
 
 func HandlerACL(w http.ResponseWriter, req *http.Request) {
-  response := &Response{false}
+  response := Response{false}
   n_as_string := req.URL.Query().Get("n")
-  n, err := strconv.Atoi(string(n_as_string))
+  n, err := strconv.Atoi(n_as_string)
   if err == nil {
     response.Allow = (n % 2) != 0
   }

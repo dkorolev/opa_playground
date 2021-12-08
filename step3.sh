@@ -32,7 +32,6 @@ echo "Shutting down the OPA server."
 kill $OPA_PID
 
 # TODO(dkorolev): Is there a cleaner way to stop a Go server?
-echo
 echo "Shutting down the Go server."
 curl -s localhost:8282/kill 2>&1 >/dev/null
 
