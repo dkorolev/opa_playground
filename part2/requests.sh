@@ -1,0 +1,10 @@
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000001","resource":"R00000005"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000002","resource":"R00000001"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000005","resource":"R00000005"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000004","resource":"R00000002"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000005","resource":"R00000002"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000004","resource":"R00000005"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000004","resource":"R00000002"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000001","resource":"R00000001"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000001","resource":"R00000002"}}' | jq .result
+curl -s -X POST $OPA_SERVER/v1/data/myapi/policy/allow --data-binary '{"input":{"identity":"U00000005","resource":"R00000002"}}' | jq .result

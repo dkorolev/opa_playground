@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Example run: `./step3.sh ~/Downloads/opa`.
-OPA_BINARY=${1:-./opa}
+OPA_BINARY=${1:-opa}
 OPA_SERVER=${2:-http://localhost:8181}
 GO_SOURCE=${3-./server_go/server.go}
 
