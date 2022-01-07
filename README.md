@@ -107,7 +107,7 @@ For the record, a few minutes were not enough to retrieve the JSON back from OPA
 
 ### Step 1: A simple regression test
 
-Only the inputs divisible by 210 (which is 2*3*5*7) resut in `true`:
+Only the inputs divisible by 210 (which is `2*3*5*7`) resut in `true`:
 
 ```
 Running the test queries.
@@ -133,7 +133,7 @@ N=219: false
 N=220: false
 ```
 
-### Step 2: The same logic where is check is an external call
+### Step 2: The same logic where the check is an external call
 
 Possible result:
 
