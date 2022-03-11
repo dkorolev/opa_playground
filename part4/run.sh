@@ -15,7 +15,7 @@ sleep 1
  
 curl -s -X PUT $OPA_SERVER/v1/policies/myapi --data-binary @policy.rego >/dev/null || (echo "Faied to upload the policy."; exit 1)
 
-echo >$TMPFILE
+echo -n >$TMPFILE
 while IFS= read -r TESTCASE ; do
   curl -s -X POST $OPA_SERVER/v1/data/myapi/allow --data-binary '{"input":'$TESTCASE'}' | jq .result >>$TMPFILE
 done < "$INPUT"
