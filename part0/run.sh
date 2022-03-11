@@ -1,6 +1,5 @@
 #!/bin/bash
-#
-# Example run: `./step1.sh ~/Downloads/opa`.
+
 OPA_BINARY=${1:-opa}
 OPA_SERVER=${2:-http://localhost:8181}
 
