@@ -25,4 +25,8 @@ echo "Shutting down the OPA server."
 kill $OPA_PID
 wait
 
-diff "$GOLDEN" "$TMPFILE" && (echo "PASS"; rm "$TMPFILE"; exit 0) || (echo "FAIL, see '$TMPFILE'"; exit 1)
+if [ -f "$GOLDEN" ] ; then
+  diff "$GOLDEN" "$TMPFILE" && (echo "PASS"; rm "$TMPFILE"; exit 0) || (echo "FAIL, see '$TMPFILE'"; exit 1)
+else
+  (mv "$TMPFILE" "$GOLDEN"; echo 'Created `'"$GOLDEN"'`.')
+fi

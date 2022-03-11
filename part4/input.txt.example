@@ -1,0 +1,6 @@
+{"role":"foo","pass_roles":[],"fail_roles":[]}
+{"role":"foo","pass_roles":["foo"],"fail_roles":[]}
+{"role":"foo","pass_roles":["nah"],"fail_roles":[]}
+{"role":"foo","pass_roles":["foo","bar","baz"],"fail_roles":["meh","baz"]}
+{"role":"bar","pass_roles":["foo","bar","baz"],"fail_roles":["meh","baz"]}
+{"role":"baz","pass_roles":["foo","bar","baz"],"fail_roles":["meh","baz"]}
